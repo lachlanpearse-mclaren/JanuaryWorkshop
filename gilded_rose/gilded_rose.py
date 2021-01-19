@@ -8,8 +8,10 @@ class GildedRose(object):
             self.update_item(item)
     
     def update_item(self,item):
-        
-        if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
+
+        item_decreases_in_value = item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
+
+        if item_decreases_in_value:
                 if item.quality > 0:
                     if item.name != "Sulfuras, Hand of Ragnaros":
                         item.quality = item.quality - 1
