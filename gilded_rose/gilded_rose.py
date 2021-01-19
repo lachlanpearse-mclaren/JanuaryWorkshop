@@ -38,7 +38,7 @@ class GildedRose(object):
             if item.name != "Aged Brie":
                 if item.name != "Backstage passes to a TAFKAL80ETC concert":
                     if item.quality > 0:
-                        if item.name != "Sulfuras, Hand of Ragnaros":
+                        if item_has_dynamic_quality:
                             self.decrease_quality(item)
                 else:
                     item.quality = item.quality - item.quality
